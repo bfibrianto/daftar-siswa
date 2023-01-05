@@ -63,4 +63,8 @@ $router->group(['prefix' => 'kelas'], function () use ($router) {
 
 $router->group(['prefix' => 'siswa'], function () use ($router)  {
     $router->get('/', 'SiswaController@index');
+    $router->get('/{id}', 'SiswaController@getOne');
+    $router->post('/', 'SiswaController@addOne');
+    $router->put('/{id}', 'SiswaController@updateOne');
+    $router->delete('/{id}', 'SiswaController@deleteOne');
 });
